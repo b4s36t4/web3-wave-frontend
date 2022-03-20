@@ -74,10 +74,12 @@ export default function App() {
         method: "eth_requestAccounts",
       });
       console.log("Conencted and got accounts", accounts, accounts[0]);
+      window && window.location.reload();
     } else {
       console.log("Please install metamask to connect your wallet here");
     }
   };
+
 
   const blockUser = async () => {
     try {
